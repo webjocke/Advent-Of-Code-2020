@@ -1,0 +1,5 @@
+const fs = require("fs")
+const groups = fs.readFileSync("input.txt").toString().split("\r\n\r\n").map(someText => someText.replace(/(\r\n|\n|\r)/gm, ""))
+const numbers = groups.map(group => (new Set(Array.from(group))).size)
+const number = numbers.reduce((accumulator, currentValue) => accumulator + currentValue)
+console.log(number)
