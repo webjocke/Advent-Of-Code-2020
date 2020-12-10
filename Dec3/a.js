@@ -20,19 +20,12 @@ function getTrees(right, down) {
         if (y > items.length-1) {
             not_done = false
         } else {
-            //console.log(y, x)
             trees_or_not = items[y].charAt(x)
-            //process.stdout.write(items[y].slice(0,x))
-            //process.stdout.write('\033[42m'+trees_or_not+'\x1b[0m')
-            //console.log(items[y].slice(x))
             if (trees_or_not == "#") {
-                //console.log(" YES")
                 trees += 1
-                //console.log(trees)
             } else {
                 not_trees += 1
             }
-            //console.log(trees_or_not)
         }
     }
     return trees

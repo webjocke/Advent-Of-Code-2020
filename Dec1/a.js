@@ -1,7 +1,5 @@
 const fs = require("fs")
-// read the file
 const content = fs.readFileSync("input_a.txt").toString()
-// print it
 const items = content.split("\n")
 items.forEach((item)=>{
     items.forEach((item2)=>{
